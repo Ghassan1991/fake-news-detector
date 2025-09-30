@@ -9,15 +9,15 @@ This project builds, evaluates, and exports a robust fake news detection model u
 
 Key Steps:
 
-Data exploration & EDA (pandas, scikit-learn, matplotlib, seaborn)
+1-Data exploration & EDA (pandas, scikit-learn, matplotlib, seaborn)
 
-Text preprocessing (NLTK, regex, emoji)
+2-Text preprocessing (NLTK, regex, emoji)
 
-Classic ML (Logistic Regression, SVM, Naive Bayes)
+3-Classic ML (Logistic Regression, SVM, Naive Bayes)
 
-LLM Fine-tuning (DistilBERT with Hugging Face)
+4-LLM Fine-tuning (DistilBERT with Hugging Face)
 
-Model export & deployment (PyTorch, ONNX, ONNX Runtime)
+5-Model export & deployment (PyTorch, ONNX, ONNX Runtime)
 
 
 
@@ -26,6 +26,7 @@ Model export & deployment (PyTorch, ONNX, ONNX Runtime)
 📂 Dataset
 
 Source:
+
 Fake news datasets from Kaggle or custom sources.
 
 Fake.csv: Labeled fake news articles
@@ -37,13 +38,13 @@ Both files must include title and text columns.
 
 📊 Project Steps
 
-Data Loading & EDA:
+1-Data Loading & EDA:
 
 Load, shuffle, and explore data.
 
 Visualize class balance and document statistics.
 
-Text Preprocessing:
+2-Text Preprocessing:
 
 Clean text (lowercase, remove punctuation, digits, HTML, emoji)
 
@@ -55,7 +56,7 @@ TF-IDF, n-grams, word embeddings (Word2Vec)
 
 Feature importance exploration
 
-Classic ML:
+3-Classic ML:
 
 Train/test split (stratified)
 
@@ -71,7 +72,7 @@ Tokenize and fine-tune DistilBERT for fake news detection
 
 Custom metrics, confusion matrix, error analysis
 
-Model Export & Serving:
+4-Model Export & Serving:
 
 Save model & tokenizer (Hugging Face)
 
@@ -86,17 +87,17 @@ Predict using ONNX Runtime
 
 🛠️ Requirements
 
-Python 3.8+
+1-Python 3.8+
 
-pandas, scikit-learn, matplotlib, seaborn
+2-pandas, scikit-learn, matplotlib, seaborn
 
-nltk, gensim, emoji
+3-nltk, gensim, emoji
 
-torch, transformers, datasets, evaluate
+4-torch, transformers, datasets, evaluate
 
-onnx, onnxruntime
+5-onnx, onnxruntime
 
-Install requirements with:
+** Install requirements with:
 
 pip install -r requirements.txt
 

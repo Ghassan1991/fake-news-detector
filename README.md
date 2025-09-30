@@ -2,6 +2,7 @@
 
 This project builds, evaluates, and exports a robust fake news detection model using both classic machine learning (Logistic Regression, SVM, Naive Bayes) and advanced deep learning (DistilBERT via Hugging Face Transformers).
 
+
 Key Steps:
 
 Data exploration & EDA (pandas, scikit-learn, matplotlib, seaborn)
@@ -14,6 +15,7 @@ LLM Fine-tuning (DistilBERT with Hugging Face)
 
 Model export & deployment (PyTorch, ONNX, ONNX Runtime)
 
+
 📂 Dataset
 
 Source:
@@ -24,6 +26,7 @@ Fake.csv: Labeled fake news articles
 True.csv: Labeled true news articles
 
 Both files must include title and text columns.
+
 
 📊 Project Steps
 
@@ -69,6 +72,7 @@ Export to ONNX
 
 Predict using ONNX Runtime
 
+
 🛠️ Requirements
 
 Python 3.8+
@@ -85,6 +89,8 @@ Install requirements with:
 
 pip install -r requirements.txt
 
+
+
 🏃‍♂️ How to Run
 1. Train & Fine-tune
 
@@ -98,31 +104,9 @@ The fine-tuned model is saved to distilbert_fake_news_final/
 
 ONNX model is exported as distilbert_fake_news.onnx
 
-Inference Example:
-
-PyTorch (Hugging Face)
-
-from transformers import DistilBertForSequenceClassification, DistilBertTokenizerFast
-model = DistilBertForSequenceClassification.from_pretrained("distilbert_fake_news_final")
-tokenizer = DistilBertTokenizerFast.from_pretrained("distilbert_fake_news_final")
-texts = ["Sample headline...", "Another news text..."]
-inputs = tokenizer(texts, return_tensors="pt", truncation=True, padding=True, max_length=256)
-with torch.no_grad():
-    preds = model(**inputs).logits.argmax(dim=1)
-print(preds)  # 0 = Fake, 1 = True
 
 
-ONNX Runtime
 
-import onnxruntime as ort
-sess = ort.InferenceSession("distilbert_fake_news.onnx")
-# Use the same tokenized inputs as above
-onnx_inputs = {
-    "input_ids": inputs["input_ids"].cpu().numpy().astype(np.int64),
-    "attention_mask": inputs["attention_mask"].cpu().numpy().astype(np.int64)
-}
-onnx_preds = sess.run(None, onnx_inputs)[0].argmax(axis=1)
-print(onnx_preds)
 
 🙋‍♂️ Author
 

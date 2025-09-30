@@ -1,3 +1,5 @@
+Fake News Detection: ML & Transformers
+
 🚀 Overview
 
 This project builds, evaluates, and exports a robust fake news detection model using both classic machine learning (Logistic Regression, SVM, Naive Bayes) and advanced deep learning (DistilBERT via Hugging Face Transformers).

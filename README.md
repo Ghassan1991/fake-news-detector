@@ -5,6 +5,8 @@ Fake News Detection: ML & Transformers
 This project builds, evaluates, and exports a robust fake news detection model using both classic machine learning (Logistic Regression, SVM, Naive Bayes) and advanced deep learning (DistilBERT via Hugging Face Transformers).
 
 
+
+
 Key Steps:
 
 Data exploration & EDA (pandas, scikit-learn, matplotlib, seaborn)
@@ -16,6 +18,9 @@ Classic ML (Logistic Regression, SVM, Naive Bayes)
 LLM Fine-tuning (DistilBERT with Hugging Face)
 
 Model export & deployment (PyTorch, ONNX, ONNX Runtime)
+
+
+
 
 
 📂 Dataset
@@ -75,6 +80,10 @@ Export to ONNX
 Predict using ONNX Runtime
 
 
+
+
+
+
 🛠️ Requirements
 
 Python 3.8+
@@ -93,6 +102,10 @@ pip install -r requirements.txt
 
 
 
+
+
+
+
 🏃‍♂️ How to Run
 1. Train & Fine-tune
 
@@ -105,6 +118,9 @@ Follow the stages step by step, from EDA to deployment.
 The fine-tuned model is saved to distilbert_fake_news_final/
 
 ONNX model is exported as distilbert_fake_news.onnx
+
+
+
 
 
 
